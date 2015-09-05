@@ -15,7 +15,7 @@ public class CharacterItemPlacement : MonoBehaviour {
 			placementObjects.Add(a.gameObject);
 		}
 		foreach (GameObject a in placementObjects) {
-			recieveShadows = a.AddComponent("RecieveShadows") as RecieveShadows;
+			recieveShadows = a.AddComponent<RecieveShadows>() as RecieveShadows;
 			Debug.Log("Added shadows to: " + a.name);
 		}
 	}

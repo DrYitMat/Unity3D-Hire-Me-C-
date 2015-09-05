@@ -53,6 +53,9 @@ TagManager:
   - name: Characters
     uniqueID: 2132855607
     locked: 0
+  - name: CharacterItems
+    uniqueID: 2741890679
+    locked: 0
   - name: Projectiles
     uniqueID: 3395087163
     locked: 0
