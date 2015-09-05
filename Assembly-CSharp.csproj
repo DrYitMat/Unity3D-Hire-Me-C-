@@ -46,6 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\CharacterItemPlacement.cs" />
+     <Compile Include="Assets\Scripts\ItemType.cs" />
      <Compile Include="Assets\Scripts\LightFlicker.cs" />
      <Compile Include="Assets\Scripts\MoveCharacter.cs" />
      <Compile Include="Assets\Scripts\PushButton.cs" />
