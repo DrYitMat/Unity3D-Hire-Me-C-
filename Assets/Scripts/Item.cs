@@ -14,11 +14,14 @@ public class Item : MonoBehaviour {
 		}
 	}
 
-	private ItemType itemType;
+	private ItemType itmType;
 
-	public ItemType ItemType {
+	public ItemType ItmType {
 		get {
-			return itemType;
+			return itmType;
+		}
+		set { 
+			itmType = value;
 		}
 	}
 
@@ -27,6 +30,9 @@ public class Item : MonoBehaviour {
 	public string ItemName {
 		get {
 			return itemName;
+		}
+		set {
+			itemName = value;
 		}
 	}
 
@@ -52,6 +58,9 @@ public class Item : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Rarity of item, used to determine how often the items drops.
+	/// </summary>
 	private float rarity;
 
 	public float Rarity {
@@ -59,14 +68,32 @@ public class Item : MonoBehaviour {
 			return rarity;
 		}
 		set {
-			rarity = value;
+			if (value > 0 && value < 1.0f)
+				rarity = value;
+			else
+				Debug.Log ("Value must be between 0 and 1");
 		}
 	}
 
-	public Item(string itName, ItemType itType, bool itUnique){
-		this.itemName = itName;
-		this.itemType = itType;
-		this.unique = itUnique;
-		Debug.Log ("Created " + itemType + " " + itemName);
+	private int levelRequirement = 1;
+
+	public int LevelRequirement {
+		get { 
+			return levelRequirement;
+		}
+		set { 
+			if (value > 0)
+				levelRequirement = value;
+			else
+				Debug.Log ("Value must be greater than 0");
+		}
+	}
+
+	public Item(string itName, ItemType itType, int lvlReq, bool itUnique){
+		ItemName = itName;
+		ItmType = itType;
+		LevelRequirement = lvlReq;
+		Unique = itUnique;
+		Debug.Log ("Created " + ItmType + " " + ItemName);
 	}
 }

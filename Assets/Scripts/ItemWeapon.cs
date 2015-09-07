@@ -5,28 +5,45 @@ public class ItemWeapon : Item {
 
 	private static float DMG_MODIFIER = .25f;
 
-	private float baseDamage;
-	private float leveledDamage;
+	private float baseDamage = 1f;
+
+	public float BaseDamage {
+		get {
+			return baseDamage;
+		}
+		set {
+			if (value > 0)
+				baseDamage = value;
+			else
+				Debug.Log ("Value must be greater than 0");
+		}
+	}
+
+	private float leveledDamage = 1f;
 
 	public float LeveledDamage {
 		get {
 			return leveledDamage;
 		}
+		set {
+			if (value > 0)
+				leveledDamage = value;
+			else
+				Debug.Log ("Value must be greater than 0");
+		}
 	}
 
-	private float baseAttackSpeed;
+	private float baseAttackSpeed = 1f;
 
 	public float BaseAttackSpeed {
 		get {
 			return baseAttackSpeed;
 		}
-	}
-
-	private int lvlRequirement;
-
-	public int LvlRequirement {
-		get {
-			return lvlRequirement;
+		set {
+			if (value > 0)
+				baseAttackSpeed = value;
+			else
+				Debug.Log ("Value must be greater than 0");
 		}
 	}
 
@@ -36,6 +53,9 @@ public class ItemWeapon : Item {
 		get {
 			return weaponType;
 		}
+		set { 
+			weaponType = value;
+		}
 	}
 
 	private string weaponName;
@@ -44,24 +64,18 @@ public class ItemWeapon : Item {
 		get {
 			return weaponName;
 		}
-	}
-
-	private ItemType baseItemType = ItemType.Weapon;
-
-	public ItemWeapon(string wepName, bool wepUnique, Weapons wepType, float dmg, float attkSpeed, int lvlReq) : base(weaponName, baseItemType, wepUnique){
-		weaponName = wepName;
-		weaponType = wepType;
-		baseDamage = dmg;
-		baseAttackSpeed = attkSpeed;
-		lvlRequirement = lvlReq;
-	}
-
-	private float levelDamage(){
-		if (lvlRequirement == null || lvlRequirement == 0)
-			return 1f;
-		else {
-			return lvlRequirement * baseDamage * DMG_MODIFIER; 
+		set {
+			weaponName = value;
 		}
+	}
+
+	private static ItemType baseItemType = ItemType.Weapon;
+
+	public ItemWeapon(string wepName, float dmg, float attkSpeed, int lvlReq, bool wepUnique, Weapons wepType) : base(wepName, baseItemType, lvlReq, wepUnique){
+		WeaponName = wepName;
+		WeaponType = wepType;
+		BaseDamage = dmg;
+		BaseAttackSpeed = attkSpeed;
 	}
 
 }
