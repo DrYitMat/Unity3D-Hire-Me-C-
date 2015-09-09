@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+/// <summary>
+/// Cast and Receive shadows.
+/// 
+/// NOTE: The material created does not allow for the sprite to be flipped by rotation or scale.
+/// 
+/// </summary>
+/// You'll need to make a new animation with everything flipped in order to do so.
 public class RecieveShadows : MonoBehaviour {
 
 	public bool castShadows = true;

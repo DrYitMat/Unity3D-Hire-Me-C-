@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Base class of all Items in the game. 
+/// 
+/// TODO: Calculate rarity based on type of weapon and player stats. 
+/// </summary>
 public class Item : MonoBehaviour {
 
 	private bool equiped;
@@ -89,11 +94,27 @@ public class Item : MonoBehaviour {
 		}
 	}
 
-	public Item(string itName, ItemType itType, int lvlReq, bool itUnique){
+	private float rarityStat = 10;
+
+	public float RarityStat {
+		get {
+			return rarityStat;
+		}
+		set {
+			if (value > 0)
+				rarityStat = value;
+			else
+				Debug.Log ("Value must be greater than 0");
+		}
+	}
+
+	public Item(string itName, ItemType itType, int lvlReq, bool itUnique, float rrityStat){
 		ItemName = itName;
 		ItmType = itType;
 		LevelRequirement = lvlReq;
 		Unique = itUnique;
+		RarityStat = rrityStat;
+		Rarity = LevelRequirement / RarityStat;
 		Debug.Log ("Created " + ItmType + " " + ItemName);
 	}
 }

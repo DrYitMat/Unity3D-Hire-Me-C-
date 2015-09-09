@@ -91,7 +91,11 @@ Material:
       data:
         first:
           name: _Cutoff
-        second: .5
+        second: 1
+      data:
+        first:
+          name: PixelSnap
+        second: 0
       data:
         first:
           name: _Parallax
@@ -103,7 +107,7 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: .5
+        second: .430000007
       data:
         first:
           name: _BumpScale

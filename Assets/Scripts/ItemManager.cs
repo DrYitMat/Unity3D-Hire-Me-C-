@@ -8,11 +8,27 @@ using System.Collections.Generic;
 /// </summary>
 public class ItemManager : MonoBehaviour {
 
+	private static int MIN_ITEM_GENERATION = 1000;
+
 	public bool rarityMode;
 
 	public List<GameObject> itemObjectList = new List<GameObject> ();
 
-	public int itemsToGenerate;
+	public List<GameObject> itemObjectDropped = new List<GameObject> ();
+
+	private int itemsToGenerate = MIN_ITEM_GENERATION;
+
+	public int ItemsToGenerate {
+		get {
+			return itemsToGenerate;
+		}
+		set {
+			if (value >= MIN_ITEM_GENERATION)
+				itemsToGenerate = value;
+			else
+				Debug.Log ("Value must be greater than: " + MIN_ITEM_GENERATION);
+		}
+	}	
 
 	private List<Item> itemList = new List<Item> ();
 

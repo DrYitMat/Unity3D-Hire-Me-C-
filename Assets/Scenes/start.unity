@@ -543,7 +543,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
 --- !u!1 &909275731
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,8 +969,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df02c9c0cbc9249118e656424d832f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSprite: {fileID: 21294192, guid: 102eac41a62ab47c587acc44e98dc07d, type: 2}
-  duplicate: {fileID: 0}
 --- !u!1001 &1313557224
 Prefab:
   m_ObjectHideFlags: 0
@@ -1068,7 +1066,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1350670108}
   - 212: {fileID: 1350670109}
-  - 114: {fileID: 1350670110}
   - 114: {fileID: 1350670111}
   - 50: {fileID: 1350670112}
   - 61: {fileID: 1350670113}
@@ -1121,17 +1118,6 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bf6c53ec298634a578633a765428f35d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!114 &1350670110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1350670107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e57503363e9f848e184cf7612fa6dcb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1350670111
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -55,7 +55,7 @@ public class ItemShield : Item {
 
 	private static ItemType baseItemType = ItemType.Shield;
 
-	public ItemShield(string shldName, float bsArmour, float dfltRate, int lvlReq, Shields shldType, bool sUnique) : base(shldName, baseItemType, lvlReq, sUnique){
+	public ItemShield(string shldName, float bsArmour, float dfltRate, int lvlReq, Shields shldType, bool sUnique) : base(shldName, baseItemType, lvlReq, sUnique, bsArmour){
 		ShieldName = shldName;
 		BaseArmour = bsArmour;
 		DeflectRate = dfltRate;

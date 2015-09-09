@@ -46,17 +46,23 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\CharacterItemPlacement.cs" />
+     <Compile Include="Assets\Scripts\AttackTypes.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\ItemHat.cs" />
      <Compile Include="Assets\Scripts\ItemManager.cs" />
+     <Compile Include="Assets\Scripts\ItemPlacement.cs" />
      <Compile Include="Assets\Scripts\ItemShield.cs" />
      <Compile Include="Assets\Scripts\ItemType.cs" />
      <Compile Include="Assets\Scripts\ItemWeapon.cs" />
      <Compile Include="Assets\Scripts\LightFlicker.cs" />
+     <Compile Include="Assets\Scripts\Mob.cs" />
+     <Compile Include="Assets\Scripts\MobGenerator.cs" />
+     <Compile Include="Assets\Scripts\MobSkeleton.cs" />
+     <Compile Include="Assets\Scripts\MobTypes.cs" />
      <Compile Include="Assets\Scripts\MoveCharacter.cs" />
      <Compile Include="Assets\Scripts\PushButton.cs" />
      <Compile Include="Assets\Scripts\RecieveShadows.cs" />
+     <Compile Include="Assets\Scripts\Stats.cs" />
      <None Include="Assets\Sprites\$Sprites-Bumped Diffuse.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

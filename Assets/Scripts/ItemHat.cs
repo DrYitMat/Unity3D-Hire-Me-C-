@@ -41,7 +41,7 @@ public class ItemHat : Item {
 	
 	private static ItemType baseItemType = ItemType.Shield;
 	
-	public ItemHat(string htName, float bsArmour, int lvlReq, Hats htType, bool sUnique) : base(htName, baseItemType, lvlReq, sUnique){
+	public ItemHat(string htName, float bsArmour, int lvlReq, Hats htType, bool sUnique) : base(htName, baseItemType, lvlReq, sUnique, bsArmour){
 		HatName = htName;
 		BaseArmour = bsArmour;
 		HatType = htType;

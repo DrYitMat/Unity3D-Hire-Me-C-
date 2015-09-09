@@ -71,7 +71,7 @@ public class ItemWeapon : Item {
 
 	private static ItemType baseItemType = ItemType.Weapon;
 
-	public ItemWeapon(string wepName, float dmg, float attkSpeed, int lvlReq, bool wepUnique, Weapons wepType) : base(wepName, baseItemType, lvlReq, wepUnique){
+	public ItemWeapon(string wepName, float dmg, float attkSpeed, int lvlReq, bool wepUnique, Weapons wepType) : base(wepName, baseItemType, lvlReq, wepUnique, dmg){
 		WeaponName = wepName;
 		WeaponType = wepType;
 		BaseDamage = dmg;

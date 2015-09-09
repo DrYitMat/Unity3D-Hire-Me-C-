@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class CharacterItemPlacement : MonoBehaviour {
+public class ItemPlacement : MonoBehaviour {
 	private RecieveShadows recieveShadows;
 
 	private List<GameObject> placementObjects = new List<GameObject>();
@@ -39,7 +39,7 @@ public class CharacterItemPlacement : MonoBehaviour {
 			break;
 
 		case ItemType.Hat:
-			placementObjects[0].GetComponent<SpriteRenderer>().sprite = newSprite;
+			placementObjects[2].GetComponent<SpriteRenderer>().sprite = newSprite;
 			// hatLogic();
 			break;
 
